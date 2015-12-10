@@ -10,12 +10,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
-
+    private var myNavigationController: UINavigationController?
+    var hostUrl: String? = ""
+    var expVal: String? = ""
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let myFirstViewController: FirstViewController = FirstViewController()
+        myNavigationController = UINavigationController(rootViewController: myFirstViewController)
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = myNavigationController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
