@@ -27,7 +27,6 @@ class FirstViewController: UIViewController {
         myLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: 200)
         self.view.addSubview(myLabel)
         
-        
         // ボタンを生成する.
         let inputButton: UIButton = UIButton(frame: CGRectMake(0,0,120,50))
         inputButton.backgroundColor = UIColor.blackColor()
